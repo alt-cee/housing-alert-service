@@ -1,5 +1,6 @@
 # craigslist site
 SITE = 'sfbay'
+AREA = 'sfc'
 
 # housing type
 CATEGORY = 'apa' # apts/housing for rent
@@ -9,11 +10,11 @@ MIN_PRICE = 3000
 MAX_PRICE = 5000
 
 # size
-MIN_BEDROOMS = 6
-MAX_BEDROOMS = None
-MIN_FT2 = None
-MAX_FT2 = None
-MIN_BATHROOMS = None
+MIN_BEDROOMS = 1
+MAX_BEDROOMS = 2
+MIN_FT2 = 700
+MAX_FT2 = 1200
+MIN_BATHROOMS = 1
 MAX_BATHROOMS = None
 
 # other
@@ -26,18 +27,31 @@ HOUSING_TYPE = [
 	'house',
 	'loft',
 	'townhouse']
-LAUNDRY = 'w/d in unit'
+LAUNDRY = ['w/d in unit']
 PARKING = [
 	'carport',
 	'attached garage',
 	'detached garage',
-	'off-street parking']
+	'off-street parking',
+	'street parking']
 
 # location
+AREAS = {
+	'Mission District': [
+		[37.748861, -122.422523], # lower left corner
+		[37.764604, -122.407460]], # upper right corner
+	'Noe Valley': [
+		[37.751371, -122.434078],
+		[37.756732, -122.423306]],
+	'Dolores': [
+		[37.756122, -122.434592],
+		[37.768013, -122.424379]]
+}
 
 site_parameters = {
 	'site': SITE,
-	'category': CATEGORY
+	'category': CATEGORY,
+	'area': AREA
 }
 
 search_parameters = {
